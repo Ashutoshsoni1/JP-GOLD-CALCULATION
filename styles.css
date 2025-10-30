@@ -1,0 +1,93 @@
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #fff9e6, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.container {
+  background: #fff;
+  border-radius: 20px;
+  padding: 25px 35px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  border: 2px solid #d4af37;
+}
+.logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+.shop-name {
+  color: #b8860b;
+  font-weight: 800;
+  margin: 5px 0;
+}
+.shop-info {
+  color: #333;
+  margin: 2px 0;
+  font-weight: 500;
+}
+hr {
+  border: none;
+  border-top: 2px solid #d4af37;
+  margin: 15px 0;
+}
+.form-group {
+  margin: 10px 0;
+  text-align: left;
+}
+input, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+#total {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #000;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.buttons button {
+  width: 48%;
+  background: linear-gradient(135deg, #d4af37, #b8860b);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.buttons button:hover {
+  background: linear-gradient(135deg, #b8860b, #a67c00);
+}
+.breakup {
+  text-align: left;
+  margin-top: 20px;
+  font-weight: 600;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+.breakup p {
+  margin: 4px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.total-line {
+  border-top: 1px solid #999;
+  margin-top: 10px;
+  padding-top: 8px;
+  font-weight: 700;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JP Jewellers Billing Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="container" id="bill-area">
+    <img src="assets/logo.png" alt="JP Jewellers Logo" class="logo">
+    <h1 class="shop-name">JP Jewellers</h1>
+    <p class="shop-info">Shahpur, Betul (M.P.)</p>
+    <p class="shop-info">📞 7987465676, 9425384168</p>
+    <p id="date" class="shop-info"></p>
+    <hr>
+
+    <div class="form-group">
+      <label><b>Metal Type:</b></label>
+      <select id="metalType">
+        <option value="Gold">Gold</option>
+        <option value="Silver">Silver</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label><b>Weight (grams):</b></label>
+      <input type="number" id="weight" placeholder="Enter weight">
+    </div>
+
+    <div class="form-group">
+      <label><b>Rate (per gram):</b></label>
+      <input type="number" id="rate" placeholder="Enter rate">
+    </div>
+
+    <div class="form-group">
+      <label><b>Making Charges (%):</b></label>
+      <input type="number" id="makingCharges" placeholder="Enter %">
+    </div>
+
+    <h2 id="total"></h2>
+    <div class="buttons">
+      <button onclick="downloadPDF()">Download PDF</button>
+      <button onclick="printBill()">Print Bill</button>
+    </div>
+
+    <div id="breakup" class="breakup">
+      <p>Base Amount: <span id="baseAmount">₹0.00</span></p>
+      <p>Making Charges: <span id="makingAmt">₹0.00</span></p>
+      <p>Subtotal: <span id="subtotal">₹0.00</span></p>
+      <p>SGST (1.5%): <span id="sgstAmt">₹0.00</span></p>
+      <p>CGST (1.5%): <span id="cgstAmt">₹0.00</span></p>
+      <p class="total-line">Total Amount: <span id="grandTotal">₹0.00</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
